@@ -106,7 +106,7 @@ class BigCommerce(Client):
         for product in self.api.resource('products'):
             yield product
 
-    def customer_groups(self, replication_key, bookmark):
+    def customer_groups(self):
 
         for customer_group in self.api.resource('customer_groups'):
             yield customer_group
