@@ -99,12 +99,11 @@ class BigCommerce(Client):
         }):
             yield order
 
-    @parse_date_string_arguments('bookmark')
-    @validate
-    def products(self, replication_key, bookmark):
+    def products(self):
 
         for product in self.api.resource('products'):
             yield product
+
 
     def customer_groups(self):
 
