@@ -106,7 +106,6 @@ class BigCommerce(Client):
         for product in self.api.resource('products'):
             yield product
 
-    @validate
     def customer_groups(self, replication_key, bookmark):
 
         for customer_group in self.api.resource('customer_groups'):
