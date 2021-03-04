@@ -106,7 +106,6 @@ class BigCommerce(Client):
         for product in self.api.resource('products'):
             yield product
 
-    @parse_date_string_arguments('bookmark')
     @validate
     def customer_groups(self, replication_key, bookmark):
 
