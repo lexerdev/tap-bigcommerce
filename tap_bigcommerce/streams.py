@@ -175,6 +175,8 @@ class Products(Stream):
 
 class CustomerGroups(Stream):
     name = "customer_groups"
+    replication_method = "FULL_TABLE"
+    replication_key = None
 
 
 class Coupons(Stream):
