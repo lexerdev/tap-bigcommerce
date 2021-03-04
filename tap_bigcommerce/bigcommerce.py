@@ -202,16 +202,15 @@ class Bigcommerce():
             ]
         },
         'customers': {
-            'version': 2,
+            'version': 3,
             'path': 'customers',
             'transform_date_fields': [
                 'date_modified',
                 'date_created'
             ],
             'sub_resources': 0,
-            'exclude_paths': [
-                ('addresses',)
-            ]
+            'exclude_paths': [],
+            'include_extra_paths': ['addresses']
         },
         'products': {
             'version': 3,
