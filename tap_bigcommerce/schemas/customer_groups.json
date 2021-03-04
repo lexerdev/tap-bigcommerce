@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "name": "customer_groups",
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "$ref": "type-integer.json"
+      },
+      "name": {
+        "$ref": "type-string.json"
+      },
+      "is_default": {
+        "$ref": "type-boolean.json"
+      },
+      "category_access": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "type": {
+                  "$ref": "type-string.json"
+              }
+          }
+      },
+      "discount_rules": {
+          "type": ["array","null"],
+          "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties":{
+                  "type": {
+                      "$ref": "type-number.json"
+                  },
+                  "price_list_id": {
+                      "$ref": "type-integer.json"
+                  }
+              }
+          }
+      },
+      "is_group_for_guests": {
+          "$ref": "type-boolean.json"
+      }
+    }
+}

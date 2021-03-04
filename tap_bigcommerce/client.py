@@ -99,16 +99,16 @@ class BigCommerce(Client):
         }):
             yield order
 
-    @parse_date_string_arguments('bookmark')
-    @validate
-    def products(self, replication_key, bookmark):
+    def products(self):
 
-        for product in self.api.resource('products', {
-                'date_modified:min': bookmark.isoformat(),
-                'sort': 'date_modified',
-                'direction': 'asc'
-        }):
+        for product in self.api.resource('products'):
             yield product
+
+
+    def customer_groups(self):
+
+        for customer_group in self.api.resource('customer_groups'):
+            yield customer_group
 
     @parse_date_string_arguments('bookmark')
     @validate
