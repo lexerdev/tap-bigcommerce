@@ -173,6 +173,9 @@ class Orders(Stream):
 class Products(Stream):
     name = "products"
 
+class CustomerGroups(Stream):
+    name = "customer_groups"
+
 
 class Coupons(Stream):
     name = "coupons"
@@ -188,5 +191,6 @@ STREAMS = {
     'products': Products,
     'coupons': Coupons,
     'customers': Customers,
-    'orders': Orders
+    'orders': Orders,
+    'customer_groups': CustomerGroups
 }
