@@ -101,7 +101,7 @@ class BigCommerce(Client):
 
     def products(self):
 
-        for product in self.api.resource('products'):
+        for product in self.api.resource('products', {"include": "images"}):
             yield product
 
 
