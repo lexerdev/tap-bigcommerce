@@ -233,7 +233,7 @@ class Bigcommerce():
             'path': 'brands'
         },
         'categories': {
-            'version': 3,
+            'version': 2,
             'path': 'categories'
         }
     }
