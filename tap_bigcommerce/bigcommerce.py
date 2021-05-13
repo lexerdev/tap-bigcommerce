@@ -227,6 +227,14 @@ class Bigcommerce():
                 'date_created',
                 'expires'
             ]
+        },
+        'brands': {
+            'version': 3,
+            'path': 'brands'
+        },
+        'categories': {
+            'version': 3,
+            'path': 'categories'
         }
     }
 
