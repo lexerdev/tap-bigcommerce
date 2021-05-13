@@ -109,6 +109,11 @@ class BigCommerce(Client):
         for brand in self.api.resource('brands'):
             yield brand
 
+    def categories(self):
+
+        for category in self.api.resource('categories'):
+            yield category
+
 
     def customer_groups(self):
 
