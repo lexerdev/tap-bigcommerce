@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "name": "brands",
+    "additionalProperties": false,
+    "properties": {
+      "custom_url": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "is_customized": {
+                  "$ref": "type-boolean.json"
+              } ,
+            "url": {
+                "$ref": "type-string.json"
+            }
+        }
+      },
+      "id": {
+        "$ref": "type-integer.json"
+      },
+      "image_url": {
+        "$ref": "type-string.json"
+      },
+      "meta_description": {
+        "$ref": "type-string.json"
+      },
+      "meta_keywords": {
+          "type": ["array", "null"]
+
+      },
+      "name": {
+        "$ref": "type-string.json"
+      },
+      "page_title": {
+        "$ref": "type-string.json"
+      }
+    }
+}
