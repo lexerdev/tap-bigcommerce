@@ -175,6 +175,16 @@ class Products(Stream):
     replication_method = "FULL_TABLE"
     replication_key = None
 
+class Brands(Stream):
+    name = "brands"
+    replication_method = "FULL_TABLE"
+    replication_key = None
+
+class Categories(Stream):
+    name = "categories"
+    replication_method = "FULL_TABLE"
+    replication_key = None
+
 class CustomerGroups(Stream):
     name = "customer_groups"
     replication_method = "FULL_TABLE"
@@ -196,5 +206,7 @@ STREAMS = {
     'coupons': Coupons,
     'orders': Orders,
     'customer_groups': CustomerGroups,
-    'customers': Customers
+    'customers': Customers,
+    'brands': Brands,
+    'categories': Categories
 }
